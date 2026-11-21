@@ -2059,14 +2059,6 @@ body.dark-mode .hud-nav-item.active {
     }
 }
 
-
-/* ==========================================================================
-   ESTÁNDARES UPDS: Flexibilidad, Accesibilidad y Modo Landscape
-   ========================================================================== */
-
-
-/* Flex children y truncamiento accesible */
-
 .nav-actions,
 .site-nav>.container,
 .hero-actions,
@@ -2088,11 +2080,6 @@ body.dark-mode .hud-nav-item.active {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-
-/* ==========================================================================
-   MEDIA QUERY: Modo Landscape y Dispositivos Compactos
-   ========================================================================== */
 
 @media (orientation: landscape) and (max-height: 500px) {
      :root {
@@ -2170,10 +2157,7 @@ body.dark-mode .hud-nav-item.active {
         gap: 8px !important;
     }
 }
-
-
-/* CORRECCION DE VISUALIZACION EN CELULARES */
-
+ 
 @media (max-width: 767px) {
     html,
     body {
@@ -2283,9 +2267,6 @@ body.dark-mode .hud-nav-item.active {
     }
 }
 
-
-/* CELULARES PEQUEÑOS */
-
 @media (max-width: 380px) {
     .nav-brand {
         font-size: 1.15rem;
@@ -2331,9 +2312,6 @@ body.dark-mode .hud-nav-item.active {
     }
 }
 
-/* ==========================================================================
-   VISOR LIGHTBOX DE IMÁGENES
-   ========================================================================== */
 .pwa-container img[data-zoomable="true"] {
     cursor: zoom-in;
 }
@@ -2444,7 +2422,6 @@ body.lightbox-open {
     .estado-red { display: none; }
 }
 
-/* Ajustes finales de adaptación: móvil vertical, horizontal y visor de imágenes */
 @media (max-width: 767px) {
     .view {
         min-height: calc(100dvh - var(--nav-h) - var(--hud-bar-h));
@@ -2577,8 +2554,6 @@ body.lightbox-open {
     }
 }
 
-
-/* ACCESIBILIDAD: MODO DE ALTO CONTRASTE */
 body.alto-contraste { background:#000 !important; color:#fff !important; --bg:#000; --surface:#050505; --surface-2:#101010; --text:#fff; --muted:#f1f1f1; --border:#fff; --cyan:#ffeb3b; --cyan-dark:#ffeb3b; --navy:#000; --shadow:none; --shadow-hover:none; }
 body.alto-contraste .pwa-container, body.alto-contraste .site-nav, body.alto-contraste .view, body.alto-contraste .game-card, body.alto-contraste .info-card, body.alto-contraste .music-card, body.alto-contraste .site-footer { background:#000 !important; color:#fff !important; border-color:#fff !important; }
 body.alto-contraste a, body.alto-contraste button, body.alto-contraste .eyebrow, body.alto-contraste h1, body.alto-contraste h2, body.alto-contraste h3, body.alto-contraste p, body.alto-contraste label { color:#fff !important; }
@@ -2588,7 +2563,6 @@ body.alto-contraste :focus-visible { outline:3px solid #ffeb3b !important; outli
 .skip-link { position:fixed; top:8px; left:8px; z-index:10000; padding:10px 14px; background:#fff; color:#000; transform:translateY(-150%); border:2px solid #000; border-radius:8px; }
 .skip-link:focus { transform:translateY(0); }
 
-/* COMPONENTES REUTILIZABLES DEL CATÁLOGO */
 .game-card { display:flex; flex-direction:column; height:100%; }
 .game-card__expand { display:flex; width:100%; align-items:center; justify-content:space-between; gap:10px; padding:0; border:0; background:transparent; color:inherit; text-align:left; font:inherit; font-weight:700; }
 .game-card__title { font-size:1.08rem; }
@@ -2605,3 +2579,72 @@ body.alto-contraste :focus-visible { outline:3px solid #ffeb3b !important; outli
 .games-grid.sim-movil .game-item { width:100%; }
 @media (max-width:767px) and (orientation:landscape) { .games-grid { grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); } .games-grid.sim-movil { grid-template-columns:1fr !important; } }
 .game-card .card-item__descripcion { display:block; }
+
+@media (orientation: landscape) and (max-height: 600px) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        min-height: 100dvh;
+    }
+
+    .pwa-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+
+    .site-nav {
+        height: var(--nav-h);
+        min-height: var(--nav-h);
+    }
+
+    #app {
+        position: absolute;
+        top: var(--nav-h);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .view {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        padding: 8px 14px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        justify-content: flex-start;
+    }
+
+    .view.active {
+        display: flex !important;
+        visibility: visible;
+    }
+
+    .view > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .hud-side-nav {
+        display: none !important;
+    }
+}
+
