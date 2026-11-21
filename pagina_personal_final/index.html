@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Presentación Personal | Oscar Limachi</title>
+<meta content="Página personal de Oscar Limachi Condori, estudiante de Ingeniería de Sistemas." name="description"/>
+<meta content="#101e36" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icons/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body><a class="skip-link" href="#app">Saltar al contenido</a>
+<div aria-busy="true" class="pwa-container">
+<header class="site-nav">
+<div class="container">
+<a aria-label="Ir al inicio" class="nav-brand" data-hidratacion="false" data-hidratado="false" href="#inicio">Oscar<span></span></a>
+<div class="nav-actions">
+<span aria-live="polite" class="estado-red" id="estadoRed" role="status"></span>
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" class="menu-toggle" data-hidratacion="false" data-hidratado="false" id="hamburgerBtn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+<nav aria-label="Menú principal" class="nav-menu" id="navMenu">
+<ul>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="inicio" href="#inicio"><span aria-hidden="true" class="menu-ico">🏠</span>Inicio</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="fotos" href="#fotos"><span aria-hidden="true" class="menu-ico">🖼️</span>Galería</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="informacion" href="#informacion"><span aria-hidden="true" class="menu-ico">💡</span>Información</a></li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="horario" href="#horario"><span aria-hidden="true" class="menu-ico">📅</span>Horario</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="musica" href="#musica"><span aria-hidden="true" class="menu-ico">🎵</span>Música</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="juegos" href="#juegos"><span aria-hidden="true" class="menu-ico">🎮</span>Juegos</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="frase" href="#frase"><span aria-hidden="true" class="menu-ico">💬</span>Mi frase</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="redes" href="#redes"><span aria-hidden="true" class="menu-ico">🔗</span>Redes</a>
+</li>
+<li><a class="menu-link" data-hidratacion="false" data-hidratado="false" data-view="contacto" href="#contacto"><span aria-hidden="true" class="menu-ico">✉️</span>Contacto</a>
+</li>
+<li class="theme-item">
+<button aria-label="Cambiar tema" class="theme-toggle" data-hidratacion="false" data-hidratado="false" id="themeToggle" type="button">☾</button>
+<button aria-label="Activar alto contraste" aria-pressed="false" class="theme-toggle contrast-toggle" id="contrastToggle" title="Alto contraste" type="button">◐</button></li>
+</ul>
+</nav>
+</div>
+</header>
+<aside class="hud-side-nav">
+<button class="hud-btn" data-hidratacion="false" data-hidratado="false" data-view="fotos" title="Galería">
+<span class="hud-icon">🖼️</span>
+<span class="hud-label">Galería</span>
+</button>
+<button class="hud-btn" data-hidratacion="false" data-hidratado="false" data-view="informacion" title="Intereses">
+<span class="hud-icon">💻</span>
+<span class="hud-label">Intereses</span>
+</button>
+<button class="hud-btn" data-hidratacion="false" data-hidratado="false" data-view="juegos" title="Videojuegos">
+<span class="hud-icon">🎮</span>
+<span class="hud-label">Juegos</span>
+</button>
+</aside>
+<main id="app">
+<section class="view view-hero active" id="inicio">
+<div class="hero-orb orb-one"></div>
+<div class="hero-orb orb-two"></div>
+<div class="container hero-content">
+<div aria-hidden="true" class="hero-avatar"><span>OL</span></div>
+<span class="eyebrow">BIENVENIDO A MI ESPACIO PERSONAL</span>
+<h1>Hola, soy <span>Oscar Limachi Condori</span></h1>
+<h2>Estudiante de Ingeniería de Sistemas</h2>
+<p>Universidad Privada Domingo Savio</p>
+<p class="hero-description">
+                        Te doy la bienvenida a mi página personal, un espacio donde comparto un poco sobre mí, mis
+                        intereses, pasatiempos y algunas de las cosas que forman parte de mi vida.
+                    </p>
+<div class="hero-actions">
+<a class="btn-main" data-hidratacion="false" data-hidratado="false" href="#informacion">Conóceme
+                            más</a>
+<a class="btn-ghost" data-hidratacion="false" data-hidratado="false" href="#contacto">Escríbeme</a>
+</div>
+</div>
+</section>
+<section class="view" id="fotos">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">IMÁGENES DE MI INTERÉS</span>
+<h2>Galería de imágenes</h2>
+<p>Una selección de imágenes relacionadas con mis gustos e intereses.</p>
+</div>
+<div class="photo-carousel" data-hidratacion="false" data-hidratado="false" id="photoCarousel">
+<div class="carousel-track" id="carouselTrack">
+<div class="carousel-slide">
+<img alt="Imagen de mi galería" loading="lazy" src="imagenes/carrusel/foto1.jpg"/>
+</div>
+<div class="carousel-slide">
+<img alt="Imagen de mi galería" loading="lazy" src="imagenes/carrusel/foto2.jpg"/>
+</div>
+<div class="carousel-slide">
+<img alt="Imagen de mi galería" loading="lazy" src="imagenes/carrusel/foto3.jpg"/>
+</div>
+</div>
+<button aria-label="Imagen anterior" class="carousel-arrow prev" data-hidratacion="false" data-hidratado="false" type="button">‹</button>
+<button aria-label="Imagen siguiente" class="carousel-arrow next" data-hidratacion="false" data-hidratado="false" type="button">›</button>
+<div class="carousel-dots" id="carouselDots"></div>
+</div>
+</div>
+</section>
+<section class="view" id="informacion">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">UN POCO SOBRE MÍ</span>
+<h2>Información personal</h2>
+<p>Conoce un poco más sobre mi forma de ser y mis actividades.</p>
+</div>
+<div class="info-grid" id="infoGrid">
+<article class="info-card open">
+<button aria-expanded="true" class="info-head" data-hidratacion="false" data-hidratado="false" type="button">
+<span class="info-icon">👤</span>
+<h3>Sobre mí</h3>
+<span aria-hidden="true" class="info-chevron"></span>
+</button>
+<div class="info-body">
+<p>
+                                    Soy Oscar Limachi Condori, estudiante de Ingeniería de Sistemas en la Universidad
+                                    Privada Domingo Savio. Me interesa aprender cosas nuevas, adquirir conocimientos y
+                                    seguir desarrollándome tanto en el ámbito personal como académico.
+                                </p>
+</div>
+</article>
+<article class="info-card">
+<button aria-expanded="false" class="info-head" data-hidratacion="false" data-hidratado="false" type="button">
+<span class="info-icon">🎯</span>
+<h3>Mis metas y objetivos</h3>
+<span aria-hidden="true" class="info-chevron"></span>
+</button>
+<div class="info-body">
+<p>
+                                    Seguir aprendiendo, adquirir experiencia y desarrollar mis habilidades para crecer
+                                    tanto personal como profesionalmente.
+                                </p>
+</div>
+</article>
+<article class="info-card">
+<button aria-expanded="false" class="info-head" data-hidratacion="false" data-hidratado="false" type="button">
+<span class="info-icon">🎮</span>
+<h3>Mis pasatiempos (no productivos)</h3>
+<span aria-hidden="true" class="info-chevron"></span>
+</button>
+<div class="info-body">
+<p>
+                                    En mi tiempo libre me gusta jugar videojuegos, disfrutar del fútbol, escuchar música
+                                    y disfrutar de diferentes deportes. Son actividades que me permiten distraerme y
+                                    pasar buenos momentos.
+                                </p>
+</div>
+</article>
+<article class="info-card">
+<button aria-expanded="false" class="info-head" data-hidratacion="false" data-hidratado="false" type="button">
+<span class="info-icon">💻</span>
+<h3>Mis intereses (productivos)</h3>
+<span aria-hidden="true" class="info-chevron"></span>
+</button>
+<div class="info-body">
+<p>
+                                    Me interesa aprender sobre tecnología, programación, creación de páginas web y
+                                    herramientas informáticas. También me gusta desarrollar proyectos y mejorar
+                                    continuamente mis conocimientos.
+                                </p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="view view-alt" id="horario">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">ORGANIZACIÓN ACADÉMICA</span>
+<h2>Mi horario</h2>
+<p>Mi horario de actividades académicas.</p>
+</div>
+<div class="schedule-container">
+<iframe loading="lazy" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTzEIEwzXeiPIHtOGl5OaNdvRD8uhCwUruHZFIxYBwJlAoqeVFZ9LOPmYHx63MA51rp65lUQbLzBSOq/pubhtml" title="Mi horario académico"></iframe>
+</div>
+</div>
+</section>
+<section class="view" id="musica">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">MI PLAYLIST</span>
+<h2>Mi música favorita</h2>
+<p>Algunas canciones que me gusta escuchar.</p>
+</div>
+<div class="sub-tabs" role="tablist">
+<button aria-selected="true" class="sub-tab active" data-hidratacion="false" data-hidratado="false" data-tab="favoritas" role="tab" type="button">Mis favoritas</button>
+<button aria-selected="false" class="sub-tab" data-hidratacion="false" data-hidratado="false" data-tab="lista" role="tab" type="button">Otras canciones</button>
+</div>
+<div class="sub-panel active" id="tab-favoritas">
+<div class="music-featured">
+<div class="music-card">
+<div class="music-cover cover-one">
+<img alt="Portada de Para Tu" loading="lazy" src="imagenes/musica/musica1.jpg"/>
+</div>
+<h3>Para Tu</h3>
+<p>Lalo San</p>
+<audio controls="" preload="none">
+<source src="musica/Lalo San - Para tu.mp3" type="audio/mpeg"/>
+                                    Tu navegador no admite audio.
+                                </audio>
+</div>
+<div class="music-card">
+<div class="music-cover cover-two">
+<img alt="Portada de Luna Dime" loading="lazy" src="imagenes/musica/musica2.jpg"/>
+</div>
+<h3>Luna Dime</h3>
+<p>Santu</p>
+<audio controls="" preload="none">
+<source src="musica/Santu - Luna Dime.mp3" type="audio/mpeg"/>
+                                    Tu navegador no admite audio.
+                                </audio>
+</div>
+<div class="music-card">
+<div class="music-cover cover-three">
+<img alt="Portada de Una Rosa" loading="lazy" src="imagenes/musica/musica3.jpg"/>
+</div>
+<h3>Una Rosa</h3>
+<p>3AM</p>
+<audio controls="" preload="none">
+<source src="musica/3AM - Una Rosa.mp3" type="audio/mpeg"/>
+                                    Tu navegador no admite audio.
+                                </audio>
+</div>
+<div class="music-card">
+<div class="music-cover cover-four">
+<img alt="Portada de La Distancia" loading="lazy" src="imagenes/musica/musica4.jpg"/>
+</div>
+<h3>La Distancia</h3>
+<p>DVICIO</p>
+<audio controls="" preload="none">
+<source src="musica/Dvicio - La Distancia.mp3" type="audio/mpeg"/>
+                                    Tu navegador no admite audio.
+                                </audio>
+</div>
+</div>
+</div>
+<div class="sub-panel" id="tab-lista">
+<div class="song-list-container">
+<h3 class="subsection-title">Otras canciones que me gustan</h3>
+<div class="music-tools">
+<input class="form-control" data-hidratacion="false" data-hidratado="false" id="songSearch" placeholder="Buscar canción o artista..." type="text"/>
+<select class="form-select" data-hidratacion="false" data-hidratado="false" id="songFilter">
+<option value="todos">Todos los géneros</option>
+<option value="pop">Pop</option>
+<option value="romantica">Romántica</option>
+<option value="urbana">Urbana</option>
+</select>
+</div>
+<div class="table-scroll">
+<table class="table song-table">
+<thead>
+<tr>
+<th>Canción</th>
+<th>Artista</th>
+<th>Género</th>
+</tr>
+</thead>
+<tbody id="songTableBody">
+<tr data-genre="pop">
+<td>Train Wreck</td>
+<td>James Arthur</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="romantica">
+<td>Bajo La Mesa</td>
+<td>Morat, Sebastián Yatra</td>
+<td>Romántica</td>
+</tr>
+<tr data-genre="pop">
+<td>No Se Va</td>
+<td>Morat</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="pop">
+<td>Ojos Marrones</td>
+<td>Lasso</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="pop">
+<td>Ordinary</td>
+<td>Alex Warren</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="pop">
+<td>Yellow</td>
+<td>Coldplay</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="romantica">
+<td>Glimpse of Us</td>
+<td>Joji</td>
+<td>Romántica</td>
+</tr>
+<tr data-genre="urbana">
+<td>ADIVINO</td>
+<td>Myke Towers, Bad Bunny</td>
+<td>Urbana</td>
+</tr>
+<tr data-genre="urbana">
+<td>Adán y Eva</td>
+<td>Paulo Londra</td>
+<td>Urbana</td>
+</tr>
+<tr data-genre="urbana">
+<td>Esperándote</td>
+<td>Manuel Turizo</td>
+<td>Urbana</td>
+</tr>
+<tr data-genre="romantica">
+<td>You Are The Reason</td>
+<td>Calum Scott</td>
+<td>Romántica</td>
+</tr>
+<tr data-genre="pop">
+<td>Somewhere Only We Know</td>
+<td>Keane</td>
+<td>Pop</td>
+</tr>
+<tr data-genre="romantica">
+<td>All of Me</td>
+<td>John Legend</td>
+<td>Romántica</td>
+</tr>
+<tr data-genre="urbana">
+<td>Más Grande Que Yo</td>
+<td>Chris Lebron, Farruko</td>
+<td>Urbana</td>
+</tr>
+<tr data-genre="pop">
+<td>Car's Outside</td>
+<td>James Arthur</td>
+<td>Pop</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="no-results" hidden="" id="noSongsMessage">No se encontraron canciones.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="view view-alt" id="juegos">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">ENTRETENIMIENTO</span>
+<h2>Mis videojuegos favoritos</h2>
+<p>Algunos videojuegos que forman parte de mis pasatiempos.</p>
+</div>
+<div class="game-filters">
+<button class="filter-btn active" data-filter="todos" data-hidratacion="false" data-hidratado="false">Todos</button>
+<button class="filter-btn" data-filter="deportes" data-hidratacion="false" data-hidratado="false">Deportes</button>
+<button class="filter-btn" data-filter="lucha" data-hidratacion="false" data-hidratado="false">Lucha</button>
+<button class="filter-btn" data-filter="accion" data-hidratacion="false" data-hidratado="false">Acción</button>
+<button class="filter-btn" data-filter="terror" data-hidratacion="false" data-hidratado="false">Terror</button>
+<button class="filter-btn" data-filter="cooperativos" data-hidratacion="false" data-hidratado="false">Cooperativos</button>
+<button aria-pressed="false" class="filter-btn mobile-preview-toggle" id="mobilePreviewToggle" type="button">Vista móvil</button></div>
+<div aria-label="Catálogo de videojuegos" aria-live="polite" class="games-grid" id="gamesGrid"></div>
+<p class="tap-hint">Toca un juego para ver su descripción.</p>
+</div>
+</section>
+<section class="view view-hero" id="frase">
+<div class="hero-orb orb-one"></div>
+<div class="hero-orb orb-two"></div>
+<div class="container quote-content">
+<span class="eyebrow">MI FRASE PERSONAL</span>
+<p class="quote-intro">Una frase que representa mi forma de pensar y afrontar la vida.</p>
+<h2>Lo único imposible en la vida es aquello que no intentas</h2>
+<p>
+                        Cada esfuerzo cuenta para alcanzar nuestras metas. Con dedicación, constancia y confianza en
+                        nosotros mismos, podemos superar los obstáculos y lograr aquello que nos proponemos.
+                    </p>
+</div>
+</section>
+<section class="view" id="contacto">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">PONTE EN CONTACTO</span>
+<h2>Contacto</h2>
+<p>Si deseas dejarme un mensaje, puedes hacerlo aquí.</p>
+</div>
+<div class="contact-container">
+<form data-hidratacion="false" data-hidratado="false" id="pwaForm" novalidate="">
+<div class="form-grid">
+<div class="field">
+<label class="form-label" for="nombre">Nombre completo</label>
+<input aria-describedby="errorNombre" autocomplete="name" class="form-control" id="nombre" maxlength="80" minlength="4" placeholder="Escribe tu nombre completo" required="" type="text"/>
+<div class="validation-message" id="errorNombre"></div>
+</div>
+<div class="field">
+<label class="form-label" for="correo">Correo electrónico</label>
+<input aria-describedby="errorCorreo" autocomplete="email" class="form-control" id="correo" maxlength="120" placeholder="ejemplo@correo.com" required="" type="email"/>
+<div class="validation-message" id="errorCorreo"></div>
+</div>
+<div class="field full">
+<label class="form-label" for="asunto">Asunto</label>
+<input aria-describedby="errorAsunto" class="form-control" id="asunto" maxlength="100" minlength="3" placeholder="Escribe el asunto" required="" type="text"/>
+<div class="validation-message" id="errorAsunto"></div>
+</div>
+<div class="field full">
+<label class="form-label" for="mensaje">Mensaje</label>
+<textarea aria-describedby="errorMensaje" class="form-control" id="mensaje" maxlength="1000" minlength="10" placeholder="Escribe tu mensaje" required="" rows="3"></textarea>
+<div class="validation-message" id="errorMensaje"></div>
+</div>
+</div>
+<button class="btn-main" data-hidratacion="false" data-hidratado="false" type="submit">Validar formulario</button>
+<div aria-live="polite" id="alertaBox" role="status"></div>
+<div class="alert alert-success" id="successAlert" role="status">¡Formulario
+                                        validado correctamente!</div>
+</form>
+</div>
+</div>
+</section>
+<section class="view view-footer" id="redes">
+<div class="container site-footer"><footer class="site-footer-semantic">
+<h3>Mis redes sociales</h3>
+<p class="footer-description">También puedes encontrarme en estas plataformas.</p>
+<div class="social-links">
+<a class="social-link" data-hidratacion="false" data-hidratado="false" href="https://www.facebook.com/share/1J45nheNNu/" rel="noopener noreferrer" target="_blank">
+<img alt="Facebook" loading="lazy" src="imagenes/logos/facebook.webp"/> Facebook
+                        </a>
+<a class="social-link" data-hidratacion="false" data-hidratado="false" href="https://www.instagram.com/oscar_limachi?dlrf=anFqMXpuZmNtenYx" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" loading="lazy" src="imagenes/logos/instagram.png"/> Instagram
+                        </a>
+<a class="social-link" data-hidratacion="false" data-hidratado="false" href="https://github.com/limachioscar19-cloud" rel="noopener noreferrer" target="_blank">
+<img alt="GitHub" loading="lazy" src="imagenes/logos/github.jpg"/> GitHub
+                        </a>
+</div>
+<div class="footer-divider"></div>
+<p class="mb-1">© 2026 Oscar Limachi Condori</p>
+<small>Mi Presentación Personal | Ingeniería de Sistemas</small>
+</footer></div>
+</section>
+</main>
+<nav class="hud-bottom-bar">
+<button class="hud-nav-item active" data-hidratacion="false" data-hidratado="false" data-view="inicio">
+<span class="hud-bar-icon">👤</span>
+<span class="hud-bar-label">Perfil</span>
+</button>
+<button class="hud-nav-item" data-hidratacion="false" data-hidratado="false" data-view="horario">
+<span class="hud-bar-icon">📅</span>
+<span class="hud-bar-label">Horario</span>
+</button>
+<button class="hud-nav-item" data-hidratacion="false" data-hidratado="false" data-view="musica">
+<span class="hud-bar-icon">🎵</span>
+<span class="hud-bar-label">Música</span>
+</button>
+<button class="hud-nav-item" data-hidratacion="false" data-hidratado="false" data-view="redes">
+<span class="hud-bar-icon">🔗</span>
+<span class="hud-bar-label">Redes</span>
+</button>
+</nav>
+<div aria-live="polite" class="aviso-red" hidden="" id="avisoRed" role="status"></div>
+<div aria-hidden="true" aria-label="Imagen ampliada" aria-modal="true" class="image-lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Cerrar imagen ampliada" class="lightbox-close" id="lightboxClose" type="button">×</button>
+<figure class="lightbox-figure">
+<img alt="" id="lightboxImage" src=""/>
+<figcaption id="lightboxCaption"></figcaption>
+</figure>
+<p class="lightbox-hint">Pulsa ESC o haz clic fuera de la imagen para cerrar</p>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js')
+                    .then(function (reg) { console.log('Service Worker PWA Registrado con Éxito:', reg.scope); })
+                    .catch(function (err) { console.error('Fallo en Registro de SW:', err); });
+            });
+        }
+    </script>
+</body>
+</html>
