@@ -243,8 +243,10 @@ $(function() {
     ];
 
     const $gamesGrid = $("#gamesGrid");
+
     function renderizarVideojuegos() {
         if (!$gamesGrid.length) return;
+
         $gamesGrid.html(videojuegos.map((juego, indice) => `
             <article class="game-item" data-category="${juego.categoria}" data-game-id="${indice}">
                 <div class="game-card card-item">
@@ -255,20 +257,22 @@ $(function() {
                             <span class="game-card__title">${juego.titulo}</span><span class="game-card__chevron" aria-hidden="true"></span>
                         </button>
                         <p id="game-description-${indice}" class="card-item__descripcion" hidden>${juego.descripcion}</p>
-                        <button type="button" class="game-card__select card-item__select" aria-pressed="false">Seleccionar</button>
                     </div>
                 </div>
             </article>`).join(""));
     }
+
     renderizarVideojuegos();
 
     function filtrarJuegos() {
         const categoria = $(this).data("filter");
         $(".filter-btn[data-filter]").removeClass("active");
         $(this).addClass("active");
+
         $gamesGrid.find(".game-item").each(function() {
             $(this).toggle(categoria === "todos" || $(this).data("category") === categoria);
         });
+
         $gamesGrid.find(".game-card__expand").attr("aria-expanded", "false");
         $gamesGrid.find(".card-item__descripcion").prop("hidden", true);
         $gamesGrid.find(".game-card").removeClass("open");
@@ -279,17 +283,10 @@ $(function() {
         const $card = $boton.closest(".game-card");
         const $description = $card.find(".card-item__descripcion");
         const abrir = $boton.attr("aria-expanded") !== "true";
+
         $boton.attr("aria-expanded", String(abrir));
         $card.toggleClass("open", abrir);
         $description.prop("hidden", !abrir);
-    }
-
-    function seleccionarTarjetaJuego() {
-        const $button = $(this);
-        const seleccionado = $button.attr("aria-pressed") !== "true";
-        $button.attr("aria-pressed", String(seleccionado)).toggleClass("is-selected", seleccionado);
-        $button.text(seleccionado ? "Seleccionado" : "Seleccionar");
-        $button.closest(".game-card").toggleClass("card-item--activo", seleccionado);
     }
 
     function alternarVistaMovil() {
@@ -298,7 +295,7 @@ $(function() {
         $(this).attr("aria-pressed", String(activo)).toggleClass("active", activo).text(activo ? "Vista normal" : "Vista móvil");
     }
 
-    const $form = $("#pwaForm");
+      const $form = $("#pwaForm");
     const $nombre = $("#nombre");
     const $correo = $("#correo");
     const $asunto = $("#asunto");
@@ -423,7 +420,6 @@ $(function() {
 
     function mostrarAlerta(texto, tipo) {
         if (tipo === "success") {
-
             $alerta.text("").attr("class", "");
             $exito.stop(true, true).text(texto).slideDown().delay(3000).slideUp();
         } else {
@@ -628,7 +624,7 @@ $(function() {
         }
     }
 
-    const componentes = [{
+      const componentes = [{
             nombre: "Menú hamburguesa",
             selector: "#hamburgerBtn",
             conectar: function($el) { $el.off("click.hidratar").on("click.hidratar", alternarMenu); }
@@ -776,8 +772,8 @@ $(function() {
         }
     ];
 
-    $gamesGrid.off("click.catalogo").on("click.catalogo", ".game-card__expand", alternarTarjetaJuego)
-        .on("click.catalogo", ".game-card__select", seleccionarTarjetaJuego);
+    // Se conserva únicamente el evento para abrir y cerrar la descripción de cada juego.
+    $gamesGrid.off("click.catalogo").on("click.catalogo", ".game-card__expand", alternarTarjetaJuego);
 
     // Herramientas internas de verificación: disponibles en consola, no visibles en la página.
     window.__smokeTestPersonal = function() {
@@ -787,14 +783,30 @@ $(function() {
             enlacesSinDestino: [...document.querySelectorAll("a")].filter(a => !a.getAttribute("href")),
             recursosRotos: [...document.querySelectorAll("img")].filter(i => i.complete && i.naturalWidth === 0 && i.id !== "lightboxImage").map(i => i.getAttribute("src"))
         };
+
         console.group("Smoke Test - Página personal");
-        console.table({botonesSinTexto:resultado.botonesSinTexto.length, imagenesSinAlt:resultado.imagenesSinAlt.length, enlacesSinDestino:resultado.enlacesSinDestino.length, recursosRotos:resultado.recursosRotos.length});
+        console.table({
+            botonesSinTexto: resultado.botonesSinTexto.length,
+            imagenesSinAlt: resultado.imagenesSinAlt.length,
+            enlacesSinDestino: resultado.enlacesSinDestino.length,
+            recursosRotos: resultado.recursosRotos.length
+        });
         console.log(resultado);
         console.groupEnd();
+
         return resultado;
     };
+
     window.__auditoriaSemanticaPersonal = function() {
-        const resultado = {header:document.querySelectorAll("header").length, nav:document.querySelectorAll("nav").length, main:document.querySelectorAll("main").length, article:document.querySelectorAll("article").length, footer:document.querySelectorAll("footer").length, imagenesSinAlt:document.querySelectorAll("img:not(#lightboxImage):not([alt]), img[alt='']").length};
+        const resultado = {
+            header: document.querySelectorAll("header").length,
+            nav: document.querySelectorAll("nav").length,
+            main: document.querySelectorAll("main").length,
+            article: document.querySelectorAll("article").length,
+            footer: document.querySelectorAll("footer").length,
+            imagenesSinAlt: document.querySelectorAll("img:not(#lightboxImage):not([alt]), img[alt='']").length
+        };
+
         console.table(resultado);
         return resultado;
     };
@@ -823,8 +835,6 @@ $(function() {
         console.log("Interfaz hidratada: " + $('[data-hidratacion="true"]').length + " elementos listos.");
     }
 
-    // Hidratar automáticamente al cargar — así todos los eventos (zoom, navegación, etc.)
-    // funcionan de inmediato sin necesidad de pulsar el botón
     hidratarInterfaz();
     mostrarVista(location.hash.slice(1), false);
     actualizarEstadoRed();
